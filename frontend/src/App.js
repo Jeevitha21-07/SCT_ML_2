@@ -100,7 +100,7 @@ tension: 0.3
     datasets: Array.from({ length: k }, (_, i) => ({
       label: `Cluster ${i}`,
       data: clusters
-        .filter(d =>d.Cluster == i)
+        .filter(d => Number(d.Cluster) === i)
         .map(d => ({
           x: Number(d["Annual Income (k$)"]),
           y: Number(d["Spending Score (1-100)"])
